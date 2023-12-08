@@ -8,6 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Authenticated\Data\**" />
+    <Compile Remove="Areas\Authenticated\Models\**" />
+    <Content Remove="Areas\Authenticated\Data\**" />
+    <Content Remove="Areas\Authenticated\Models\**" />
+    <EmbeddedResource Remove="Areas\Authenticated\Data\**" />
+    <EmbeddedResource Remove="Areas\Authenticated\Models\**" />
+    <None Remove="Areas\Authenticated\Data\**" />
+    <None Remove="Areas\Authenticated\Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.12" />
@@ -21,9 +32,11 @@
 
   <ItemGroup>
     <Folder Include="Areas\Authenticated\Controllers\" />
-    <Folder Include="Areas\Authenticated\Data\" />
-    <Folder Include="Areas\Authenticated\Models\" />
     <Folder Include="Areas\Authenticated\Views\" />
+    <Folder Include="Areas\UnAuthenticated\Controllers\" />
+    <Folder Include="Areas\UnAuthenticated\Data\" />
+    <Folder Include="Areas\UnAuthenticated\Models\" />
+    <Folder Include="Areas\UnAuthenticated\Views\" />
   </ItemGroup>
 
 </Project>
