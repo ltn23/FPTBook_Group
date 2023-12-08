@@ -19,4 +19,11 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.11" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Authenticated\Controllers\" />
+    <Folder Include="Areas\Authenticated\Data\" />
+    <Folder Include="Areas\Authenticated\Models\" />
+    <Folder Include="Areas\Authenticated\Views\" />
+  </ItemGroup>
+
 </Project>
