@@ -39,11 +39,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Authenticated\Controllers\" />
     <Folder Include="Areas\UnAuthenticated\Views\" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\PublishCompany\CompanyIndex.cshtml" />
+    <None Include="Views\PublishCompany\CreatePublishCompany.cshtml" />
+    <None Include="Views\PublishCompany\ViewCompany.cshtml" />
     <None Include="wwwroot\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
     <None Include="wwwroot\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
     <None Include="wwwroot\fonts\font-awesome-4.7.0\less\animated.less" />
@@ -133,6 +135,25 @@
     <None Include="wwwroot\vendor\slick\slick.min.js" />
     <None Include="wwwroot\vendor\slick\slick.scss" />
     <None Include="wwwroot\vendor\sweetalert\sweetalert.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Category\CategoryApproved.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Category\CategoryIndex.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Category\CreateCategory.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Category\ViewCategory.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
