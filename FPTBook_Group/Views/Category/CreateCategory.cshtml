@@ -1,5 +1,4 @@
-﻿@model FPTBook_Group.ModelsCRUD.Category.AddCategoryViewModel;
-
+﻿@model FPTBook_Group.ModelsCRUD.Category.AddCategoryViewModel
 @{
     Layout = "_Layout";
 }
@@ -14,4 +13,10 @@
         <input type="text" class="form-control" id="CategoryDesExample" asp-for="Description">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-controller="Category" asp-action="CategoryIndex" class="btn btn-primary">Back to List</a>
 </form>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
