@@ -39,8 +39,6 @@ namespace FPTBook_Group.Areas.Authenticated.Controllers
             {
                 Name = CategoryModel.Name,
                 Description = CategoryModel.Description
-
-
             };
 
             await context.Categories.AddAsync(category);
