@@ -1,13 +1,18 @@
+
 ﻿using FPTBook_Group.Data;
 using FPTBook_Group.Models;
 using FPTBook_Group.ModelsCRUD.PublishCompany;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+=======
+﻿using Microsoft.AspNetCore.Mvc;
+>>>>>>> master
 
 namespace FPTBook_Group.Areas.Authenticated.Controllers
 {
     public class PushlishCompanyController : Controller
     {
+<<<<<<< HEAD
         private readonly ApplicationDbContext context;
 
         public PushlishCompanyController(ApplicationDbContext context)
@@ -92,5 +97,11 @@ namespace FPTBook_Group.Areas.Authenticated.Controllers
 
             return RedirectToAction("CompanyIndex");
         }
+=======
+        public IActionResult Index()
+        {
+            return View();
+        }
+>>>>>>> master
     }
 }

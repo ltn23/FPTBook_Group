@@ -1,13 +1,17 @@
+<<<<<<< HEAD
 ﻿
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+=======
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+>>>>>>> master
 
 namespace FPTBook_Group.Models
 {
     public class Book
     {
-
         [Key]
         public int BookId { get; set; }
         [Required]
@@ -28,14 +32,21 @@ namespace FPTBook_Group.Models
         public int CategoryId { get; set; }
         [Required]
         public int PublishCompanyId { get; set; }
+
+
         [ForeignKey("CategoryId")]
         public Category Category { get; set; }
-		public PublishCompany PublishCompany { get; internal set; }
+        [ForeignKey("PublishCompanyId")]
+        public PublishCompany PublishCompany { get; set; }
 
         [Required(ErrorMessage = "Please choose Front image")]
         [Display(Name = "Front Image")]
         [NotMapped]
+<<<<<<< HEAD
         public IFormFile FronImage { get; internal set; }
+=======
+        public IFormFile FronImage { get; set; }
+>>>>>>> master
 
     }
 }

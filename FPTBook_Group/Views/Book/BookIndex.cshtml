@@ -1,0 +1,54 @@
+﻿@model List<FPTBook_Group.Models.Book>;
+@{
+	Layout = "_Layout2";
+}
+<partial name="_Notification" />
+<div class="row pt-4 pb-4">
+	<div class="col-6">
+		<h2>List of Book</h2>
+	</div>
+	<div class="col-6">
+		<a asp-controller="Book" asp-action="CreateUpdate" class="btn btn-primary">Create a Book</a>
+	</div>
+</div>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Book Name</th>
+			<th>Quantity</th>
+			<th>Price</th>
+			<th>Description</th>
+			<th>Updated Date</th>
+			<th>Author</th>
+			<th>Image</th>
+			<th>Category Name</th>
+			<th>PublishCompany Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var book in Model)
+		{
+			<tr>
+				<td>@book.BookId</td>
+				<td>@book.Name</td>
+				<td>@book.Quantity</td>
+				<td>@book.Price</td>
+				<td>@book.Description</td>
+				<td>@book.UpdateDate</td>
+				<td>@book.Author</td>
+				<td><img src="~/Images/@book.Image" style="width: 75px; height:75px;" /></td>
+				<td>@book.Category.Name</td>
+				@* <td>@book.PublishCompany.Name</td> *@
+				<td><a href="ViewBook/@book.BookId" class="btn btn-outline-success">View</a></td>
+				<td>
+					<a asp-controller="Book" asp-action="CreateUpdate" asp-route-id="@book.BookId" class="btn btn-primary">Edit</a>
+					<a asp-controller="Book" asp-action="Delete" asp-route-id="@book.BookId" class="btn btn-danger">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+<a href="CreateBook" class="btn btn-outline-primary">New Books</a>
+
+﻿

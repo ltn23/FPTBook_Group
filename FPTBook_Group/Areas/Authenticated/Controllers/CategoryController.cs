@@ -1,10 +1,8 @@
 ﻿using FPTBook_Group.Data;
 using FPTBook_Group.Models;
 using FPTBook_Group.ModelsCRUD.Category;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Data;
 
 namespace FPTBook_Group.Areas.Authenticated.Controllers
 {

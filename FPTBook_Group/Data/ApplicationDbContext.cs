@@ -12,12 +12,17 @@ namespace FPTBook_Group.Data
         {
         }
         public DbSet<Category> Categories { get; set; }
+<<<<<<< HEAD
         public DbSet<Book> Books { get; set; }
 
         public DbSet<PublishCompany> PublishCompanies { get; set; }
 
 
 
+=======
+        public DbSet<PublishCompany>PublishCompanies {  get; set; }  
+        public DbSet<Book> Books { get; set; }  
+>>>>>>> master
 
 
     }
