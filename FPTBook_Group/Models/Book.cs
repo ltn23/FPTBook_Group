@@ -29,13 +29,13 @@ namespace FPTBook_Group.Models
 
         [ForeignKey("CategoryId")]
         public Category Category { get; set; }
-       /* [ForeignKey("PublishCompanyId")]*/
-        /*public PublishCompany PublishCompany { get; set; }*/
+        [ForeignKey("PublishCompanyId")]
+        public PublishCompany PublishCompany { get; set; }
 
-        /* [Required(ErrorMessage = "Please choose Front image")]
-         [Display(Name = "Front Image")]
-         [NotMapped]
-         public IFormFile FronImage { get; set; }*/
+        [Required(ErrorMessage = "Please choose Front image")]
+        [Display(Name = "Front Image")]
+        [NotMapped]
+        public IFormFile FronImage { get; set; }
 
     }
 }

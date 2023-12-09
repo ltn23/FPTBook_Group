@@ -30,7 +30,6 @@ namespace FPTBook_Group.ModelsCRUD.Book
 
 		[ForeignKey("CategoryId")]
 		public Models.Category Category { get; set; }
-		
-		
-	}
+        public IFormFile FronImage { get; internal set; }
+    }
 }
