@@ -1,15 +1,9 @@
-﻿
-
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace FPTBook_Group.Models
+namespace FPTBook_Group.ModelsCRUD.Book
 {
-    public class Book
+    public class AddBookViewModel
     {
-
-        [Key]
-        public int BookId { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
@@ -28,14 +22,16 @@ namespace FPTBook_Group.Models
         public int CategoryId { get; set; }
         [Required]
         public int PublishCompanyId { get; set; }
+
+
         [ForeignKey("CategoryId")]
-        public Category Category { get; set; }
-		public PublishCompany PublishCompany { get; internal set; }
+        public Models.Category Category { get; set; }
+        [ForeignKey("PublishCompanyId")]
+        public Models.PublishCompany PublishCompany { get; set; }
 
         [Required(ErrorMessage = "Please choose Front image")]
         [Display(Name = "Front Image")]
         [NotMapped]
-        public IFormFile FronImage { get; internal set; }
-
+        public IFormFile FronImage { get; set; }
     }
 }

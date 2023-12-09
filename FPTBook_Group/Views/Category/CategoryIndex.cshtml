@@ -1,41 +1,24 @@
-﻿
-@model List<Category>
-<partial name="_Notification"/>
-<div class="row pt-4 pb-4">
-	<div class="col-6">
-		<h2>List of Categories</h2>
-	</div>
-	<div class="col-6">
-		<a asp-controller="Category" asp-action="CreateCategory" class="btn btn-primary">Create a Category</a>
-	</div>
-</div>
-	<table class="table table-bordered">
-		<thead>
+﻿@model List<FPTBook_Group.Models.Category>;
+
+<h1>Categories</h1>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var category in Model)
+		{
 			<tr>
-				<td>Id</td>
-				<td> Name</td>
-				<td>Description</td>
+				<td>@category.CategoryId</td>
+				<td>@category.Name</td>
+				<td>@category.Description</td>
+				<td><a href="ViewCategory/@category.CategoryId" class="btn btn-outline-success">View</a></td>
 			</tr>
-		</thead>
-		<tbody>
-			@foreach (var category in Model)
-			{
-				<tr>
-					<td>@category.CategoryId</td>
-					<td>@category.Name</td>
-					<td>@category.Description</td>
-					<td>
-					<a href="ViewCategory/@category.CategoryId"class="btn btn-outline-success">view</a>
-					</td>
-					<td>
-						<a asp-controller="Category" asp-action="Edit" asp-route-id="@category.CategoryId" class="btn btn-primary">Edit</a>
-						<a asp-controller="Category" asp-action="Delete" asp-route-id="@category.CategoryId" class="btn btn-danger">Delete</a>
-					</td>
-				</tr>
-			}
-		</tbody>
-		</tbody>
-	</table>
-</div>
-
-
+		}
+	</tbody>
+</table>
+<a href="CreateCategory" class="btn btn-outline-primary">New Categies</a>

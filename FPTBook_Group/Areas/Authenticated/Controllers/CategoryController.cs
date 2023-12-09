@@ -1,4 +1,4 @@
-﻿/*using FPTBook_Group.Data;
+﻿using FPTBook_Group.Data;
 using FPTBook_Group.Models;
 using FPTBook_Group.ModelsCRUD.Category;
 using Microsoft.AspNetCore.Authorization;
@@ -132,4 +132,3 @@ namespace FPTBook_Group.Areas.Authenticated.Controllers
         }
     }
 }
-*/

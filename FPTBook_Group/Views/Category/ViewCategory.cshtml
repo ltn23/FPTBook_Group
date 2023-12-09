@@ -2,6 +2,7 @@
 @{
     Layout = "_Layout2";
 }
+
 <h1>View Category</h1>
 <form method="post" action="ViewCategory">
     <div class="mb-3">
@@ -18,10 +19,4 @@
     </div>
     <button type="submit" class="btn btn-primary">Edit</button>
     <button type="submit" class="btn btn-danger" asp-action="DeleteCategory" asp-controller="Category">Delete</button>
-
 </form>
-@section Scripts {
-    @{
-        <partial name="_ValidationScriptsPartial" />
-    }
-}

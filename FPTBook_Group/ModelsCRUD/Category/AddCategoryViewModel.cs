@@ -1,4 +1,4 @@
-﻿/*using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace FPTBook_Group.ModelsCRUD.Category
 {
@@ -10,4 +10,3 @@ namespace FPTBook_Group.ModelsCRUD.Category
         public string Description { get; set; }
     }
 }
-*/

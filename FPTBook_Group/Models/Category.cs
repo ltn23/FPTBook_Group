@@ -11,5 +11,6 @@ namespace FPTBook_Group.Models
         [Required]
         public string Description { get; set; }
         public bool IsApproved { get; set; }
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿@using Microsoft.VisualBasic.CompilerServices
 @using System.Reflection.Metadata
-@using Microsoft.AspNetCore.Mvc.TagHelpers;
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @model List<FPTBook_Group.Models.Category>;
 @{
 }
@@ -24,18 +24,18 @@
             <td>@category.Description</td>
             <td>@category.IsApproved</td>
             <td>
-              
-                   
-        
+               @*  @if (!category.IsApproved && User.IsInRole(SD.AdminRole))
+                { *@
+                    <form method="post" action="@Url.Action("Approve", new { id = category.CategoryId })">
+                        <button type="submit" class="btn btn-primary">Approve</button>
+                    </form>
+                    <form method="post" action="@Url.Action("Reject", new { id = category.CategoryId })">
+                        <button type="submit" class="btn btn-danger">Reject</button>
+                    </form>
+               @*  } *@
             </td>
             <td><a href="ViewCategory/@category.CategoryId" class="btn btn-outline-success">View</a></td>
         </tr>
     }
     </tbody>
 </table>
-@*  <form method="post" action="@Url.Action("Approve", new { id = category.CategoryId })">
-                        <button type="submit" class="btn btn-primary">Approve</button>
-                    </form>
-                    <form method="post" action="@Url.Action("Reject", new { id = category.CategoryId })">
-                        <button type="submit" class="btn btn-danger">Reject</button>
-                    </form> *@
