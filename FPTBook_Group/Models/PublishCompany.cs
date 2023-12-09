@@ -2,15 +2,13 @@
 
 namespace FPTBook_Group.Models
 {
-    public class Category
+    public class PublishCompany
     {
         [Key]
-        public int CategoryId { get; set; }
+        public int PublishingCompanyId { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
-        public string Description { get; set; }
-        public bool IsApproved { get; set; }
-
+        public string Adress { get; set; }
     }
 }

@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+﻿@model List<FPTBook_Group.Models.Category>;
+
+<h1>Categories</h1>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var category in Model)
+		{
+			<tr>
+				<td>@category.CategoryId</td>
+				<td>@category.Name</td>
+				<td>@category.Description</td>
+				<td><a href="ViewCategory/@category.CategoryId" class="btn btn-outline-success">View</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
+<a href="CreateCategory" class="btn btn-outline-primary">New Categies</a>
+=======
 ﻿@model List<FPTBook_Group.Models.Category>
 	;
 
@@ -24,3 +50,4 @@
 
 	</table>
 	<a href="CreateCategory" class="btn btn-outline-primary">New Categies</a>
+>>>>>>> master

@@ -43,6 +43,13 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
+    <None Include="Views\Category\CategoryApproved.cshtml" />
+    <None Include="Views\Category\CategoryIndex.cshtml" />
+    <None Include="Views\Category\CreateCategory.cshtml" />
+    <None Include="Views\Category\ViewCategory.cshtml" />
+=======
+>>>>>>> master
     <None Include="wwwroot\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
     <None Include="wwwroot\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
     <None Include="wwwroot\fonts\font-awesome-4.7.0\less\animated.less" />
