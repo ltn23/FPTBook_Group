@@ -11,6 +11,14 @@ namespace FPTBook_Group.Data
         {
         }
 
+<<<<<<< Updated upstream
         public DbSet<Category> Categories { get; set; }
+=======
+        /*  public DbSet<Category> Categories { get; set; }
+
+          public DbSet<PublishCompany> PublishCompanies { get; set; }*/
+        public DbSet<Book> Books { get; set; }
+
+>>>>>>> Stashed changes
     }
 }

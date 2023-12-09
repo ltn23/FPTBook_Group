@@ -4,6 +4,7 @@ using FPTBook_Group.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FPTBook_Group.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231209090531_Migration-Book")]
+    partial class MigrationBook
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,8 +25,6 @@ namespace FPTBook_Group.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-<<<<<<< Updated upstream
-=======
             modelBuilder.Entity("FPTBook_Group.Models.Book", b =>
                 {
                     b.Property<int>("BookId")
@@ -72,7 +73,6 @@ namespace FPTBook_Group.Data.Migrations
                     b.ToTable("Books");
                 });
 
->>>>>>> Stashed changes
             modelBuilder.Entity("FPTBook_Group.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")
@@ -94,9 +94,6 @@ namespace FPTBook_Group.Data.Migrations
 
                     b.HasKey("CategoryId");
 
-<<<<<<< Updated upstream
-                    b.ToTable("Categories");
-=======
                     b.ToTable("Category");
                 });
 
@@ -119,7 +116,6 @@ namespace FPTBook_Group.Data.Migrations
                     b.HasKey("PublishingCompanyId");
 
                     b.ToTable("PublishCompany");
->>>>>>> Stashed changes
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
