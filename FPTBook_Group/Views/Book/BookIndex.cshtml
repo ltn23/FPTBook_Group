@@ -2,8 +2,15 @@
 @{
 	Layout = "_Layout2";
 }
-
-<h1>Book</h1>
+<partial name="_Notification" />
+<div class="row pt-4 pb-4">
+	<div class="col-6">
+		<h2>List of Book</h2>
+	</div>
+	<div class="col-6">
+		<a asp-controller="Book" asp-action="CreateUpdate" class="btn btn-primary">Create a Book</a>
+	</div>
+</div>
 <table class="table">
 	<thead>
 		<tr>
@@ -32,10 +39,16 @@
 				<td>@book.Author</td>
 				<td><img src="~/Images/@book.Image" style="width: 75px; height:75px;" /></td>
 				<td>@book.Category.Name</td>
-				<td>@book.PublishCompany.Name</td>
+				@* <td>@book.PublishCompany.Name</td> *@
 				<td><a href="ViewBook/@book.BookId" class="btn btn-outline-success">View</a></td>
+				<td>
+					<a asp-controller="Book" asp-action="CreateUpdate" asp-route-id="@book.BookId" class="btn btn-primary">Edit</a>
+					<a asp-controller="Book" asp-action="Delete" asp-route-id="@book.BookId" class="btn btn-danger">Delete</a>
+				</td>
 			</tr>
 		}
 	</tbody>
 </table>
 <a href="CreateBook" class="btn btn-outline-primary">New Books</a>
+
+﻿
